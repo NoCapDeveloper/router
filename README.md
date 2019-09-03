@@ -16,6 +16,10 @@ router.on('/', () => console.log('Show Home Page'));
 router.on('/login', () => console.log('Show Login Page'));
 router.on('/user/:id', e => console.log('Show user ' + e.id));
 
+router.goTo(location.pathname); // run it after
+// registering all routes to navigate
+// to the route user typed in the address bar
+
 // To navigate from JavaScript:
 router.goTo('/user/3245');
 ```

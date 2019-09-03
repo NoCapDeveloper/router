@@ -1,4 +1,4 @@
-import Router from './Router.js';
+import Router from './Router.js.js';
 
 let h1 = document.querySelector('h1');
 

@@ -1,10 +1,10 @@
 {
-  "name": "router",
+  "name": "@nocapdeveloper/router",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Router for Single Page Web Apps",
+  "main": "src/Router.js",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel example/index.html"
   },
   "keywords": [],
   "author": "",
