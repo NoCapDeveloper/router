@@ -1,3 +1,14 @@
+const getFragments = route => {
+  let fragments = route.split('/');
+
+  // remove fragments[0], it's always an empty string
+  fragments.shift();
+
+  return fragments;
+}
+
+// TODO: Don't push the same route if it's already active
+// TODO: Clean the code up
 class Router {
   constructor(titles) {
     this.titles = titles;
@@ -31,12 +42,10 @@ class Router {
   }
 
   goTo(route, replace = false) {
-    let fragments = route.split('/');
-    fragments.shift();
+    let fragments = getFragments(route);
 
     for (let rt in this.routes) {
-      let rtf = rt.split('/');
-      rtf.shift();
+      let rtf = getFragments(rt);
 
       if (fragments.length == rtf.length) {
         let args = {};
